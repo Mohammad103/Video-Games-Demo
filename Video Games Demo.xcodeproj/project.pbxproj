@@ -83,7 +83,6 @@
 				E055D3715E50603E7A60E6EA /* Pods-Video Games DemoTests.debug.xcconfig */,
 				913767BFBDF2C3D3BC4F4272 /* Pods-Video Games DemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -452,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msm.Video-Games-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.msm.Video-Games-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
