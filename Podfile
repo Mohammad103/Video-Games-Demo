@@ -7,6 +7,7 @@ target 'Video Games Demo' do
   inhibit_all_warnings!
 
   pod 'Cosmos', '~> 19.0'
+  pod 'Kingfisher', '5.7.0'
 
   target 'Video Games DemoTests' do
     inherit! :search_paths
