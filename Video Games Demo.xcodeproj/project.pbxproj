@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1AB7C33BB35114A9C4E04E47 /* Pods_Video_Games_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AAB984BCAF5D0C780354C9 /* Pods_Video_Games_DemoTests.framework */; };
 		55BB1791698C3F1DB75DE933 /* Pods_Video_Games_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC07C1EB5F70943A7A0EB25 /* Pods_Video_Games_Demo.framework */; };
+		954FA6A922E25A810003E13A /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA6A822E25A810003E13A /* VideoGame.swift */; };
+		954FA6AB22E2634B0003E13A /* VideoGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954FA6AA22E2634B0003E13A /* VideoGameTests.swift */; };
 		956E7CF822E24E0A00390CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E7CF722E24E0A00390CF5 /* AppDelegate.swift */; };
 		956E7CFD22E24E0A00390CF5 /* VideoGames.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956E7CFB22E24E0A00390CF5 /* VideoGames.storyboard */; };
 		956E7CFF22E24E0B00390CF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 956E7CFE22E24E0B00390CF5 /* Assets.xcassets */; };
 		956E7D0222E24E0B00390CF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956E7D0022E24E0B00390CF5 /* LaunchScreen.storyboard */; };
-		956E7D0D22E24E0B00390CF5 /* Video_Games_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E7D0C22E24E0B00390CF5 /* Video_Games_DemoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		4CC07C1EB5F70943A7A0EB25 /* Pods_Video_Games_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Video_Games_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		913767BFBDF2C3D3BC4F4272 /* Pods-Video Games DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Games DemoTests.release.xcconfig"; path = "Target Support Files/Pods-Video Games DemoTests/Pods-Video Games DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		954FA6A822E25A810003E13A /* VideoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGame.swift; sourceTree = "<group>"; };
+		954FA6AA22E2634B0003E13A /* VideoGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameTests.swift; sourceTree = "<group>"; };
 		956E7CF422E24E0A00390CF5 /* Video Games Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Games Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		956E7CF722E24E0A00390CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		956E7CFC22E24E0A00390CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoGames.storyboard; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		956E7D0122E24E0B00390CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		956E7D0322E24E0B00390CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956E7D0822E24E0B00390CF5 /* Video Games DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Video Games DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		956E7D0C22E24E0B00390CF5 /* Video_Games_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video_Games_DemoTests.swift; sourceTree = "<group>"; };
 		956E7D0E22E24E0B00390CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D778E8F96CD7B7968DAC8AFD /* Pods-Video Games Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Games Demo.debug.xcconfig"; path = "Target Support Files/Pods-Video Games Demo/Pods-Video Games Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D953F74CF4892297B6835365 /* Pods-Video Games Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Video Games Demo.release.xcconfig"; path = "Target Support Files/Pods-Video Games Demo/Pods-Video Games Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		954FA6A222E255680003E13A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				954FA6A822E25A810003E13A /* VideoGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 		956E7D0B22E24E0B00390CF5 /* Video Games DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				956E7D0C22E24E0B00390CF5 /* Video_Games_DemoTests.swift */,
+				954FA6AA22E2634B0003E13A /* VideoGameTests.swift */,
 				956E7D0E22E24E0B00390CF5 /* Info.plist */,
 			);
 			path = "Video Games DemoTests";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				956E7CF822E24E0A00390CF5 /* AppDelegate.swift in Sources */,
+				954FA6A922E25A810003E13A /* VideoGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				956E7D0D22E24E0B00390CF5 /* Video_Games_DemoTests.swift in Sources */,
+				954FA6AB22E2634B0003E13A /* VideoGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
