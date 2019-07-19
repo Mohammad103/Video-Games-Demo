@@ -1,0 +1,44 @@
+{
+    "video_games": [
+        {
+            "title": "Grand Theft Auto IV",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/1.jpg"
+        },
+        {
+            "title": "Half-Life 2: The Orange Box",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/2.jpg"
+        },
+        {
+            "title": "Far Cry",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/19.jpg"
+        },
+        {
+            "title": "Mass Effect",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/27.jpg"
+        },
+        {
+            "title": "Crysis",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/44.jpg"
+        },
+        {
+            "title": "Fallout 3",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/42.jpg"
+        },
+        {
+            "title": "Star Wars: The Force Unleashed",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/37.jpg"
+        },
+        {
+            "title": "Gears of War",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/35.jpg"
+        },
+        {
+            "title": "Super Mario Bros.",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/3.jpg"
+        },
+        {
+            "title": "Mortal Kombat",
+            "cover_url": "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/7.jpg"
+        }
+    ]
+}
