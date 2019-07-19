@@ -17,9 +17,9 @@ class VideoGameTableViewCellTests: XCTestCase {
     
     func testInit() {
         let tableView = UITableView()
-        tableView.register(VideoGameTableViewCell.self, forCellReuseIdentifier: "VideoGameTableViewCell")
+        tableView.register(VideoGameTableViewCell.self, forCellReuseIdentifier: String(describing: VideoGameTableViewCell.self))
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoGameTableViewCell", for: IndexPath(row: 0, section: 0)) as? VideoGameTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: VideoGameTableViewCell.self), for: IndexPath(row: 0, section: 0)) as? VideoGameTableViewCell
         XCTAssertNotNil(cell)
     }
 
