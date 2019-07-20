@@ -16,7 +16,7 @@ XCode 10.2.1
 
 ```
 Clone project
-cd project_dir
+cd project/dir/.../...
 pod install
-run workspace file
+run .xcworkspace file
 ```
