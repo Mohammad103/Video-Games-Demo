@@ -35,6 +35,8 @@ class VideoGameTableViewCell: UITableViewCell {
         self.index = index
         titleLabel.text = title
         ratingView.rating = rating
+        ratingView.settings.fillMode = .half
+        
         if coverImageURL != nil, let url = URL(string: coverImageURL!) {
             coverImageView.kf.setImage(with: url, placeholder: UIImage(named:"placeholder"))
         }
