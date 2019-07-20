@@ -14,9 +14,19 @@
         <scene sceneID="qXM-kX-3gK">
             <objects>
                 <navigationController id="TYd-ER-CWn" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eNe-AK-jil">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eNe-AK-jil">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.52941176470588236" blue="0.73333333333333328" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ees-as-0bj"/>
@@ -29,16 +39,16 @@
         <!--Video Games-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoGamesViewController" id="BYZ-38-t0r" customClass="VideoGamesViewController" customModule="Video_Games_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ejU-Us-QpU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoGameTableViewCell" rowHeight="120" id="5Ji-hD-xUm" customClass="VideoGameTableViewCell" customModule="Video_Games_Demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoGameTableViewCell" rowHeight="120" id="5Ji-hD-xUm" customClass="VideoGameTableViewCell" customModule="Video_Games_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ji-hD-xUm" id="ME3-1T-cX7">
@@ -49,6 +59,7 @@
                                                     <rect key="frame" x="20" y="11" width="69" height="98"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dee-zG-gTV" secondAttribute="height" multiplier="600:850" id="0Nw-Z5-M6A"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Psg-Ub-jAI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOJ-Ry-lBi" customClass="CosmosView" customModule="Cosmos">
@@ -90,6 +101,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QM2-zO-MFt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Dyq-jU-orE"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,7 +118,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Video Games" id="mM0-EJ-LZP">
                         <barButtonItem key="backBarButtonItem" title=" " id="WQh-tA-zYN"/>
+                        <rightBarButtonItems>
+                            <barButtonItem image="sort-down" id="t5L-rA-Gs2">
+                                <connections>
+                                    <action selector="sortAllVideoGames" destination="BYZ-38-t0r" id="QM5-mv-44d"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="shuffle" id="MWC-hL-mZ9">
+                                <connections>
+                                    <action selector="setRandomRatings" destination="BYZ-38-t0r" id="b8e-xK-VRt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ejU-Us-QpU" id="HxQ-WZ-lmU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,5 +142,7 @@
     </scenes>
     <resources>
         <image name="placeholder" width="1920" height="1280"/>
+        <image name="shuffle" width="24" height="24"/>
+        <image name="sort-down" width="24" height="24"/>
     </resources>
 </document>

@@ -8,13 +8,22 @@
 
 import UIKit
 
+protocol VideoGamesViewModelDelegate: AnyObject {
+    func videoGamesUpdatedSuccessfully()
+    func failedLoadingVideoGames(errorMessage: String)
+}
+
+
 class VideoGamesViewModel {
 
+    weak var delegate: VideoGamesViewModelDelegate?
     private var videoGames: [VideoGame] = []
 
     
     init() {
         loadVideoGames()
+        setRandomRatings()
+        delegate?.videoGamesUpdatedSuccessfully()
     }
     
     func loadVideoGames() {
@@ -26,7 +35,7 @@ class VideoGamesViewModel {
                     videoGames = VideoGame.parseJSON(dictionary: videoGamesDic)
                 }
             } catch {
-                // handle error
+                delegate?.failedLoadingVideoGames(errorMessage: "Error happened while trying load video games data.")
             }
         }
     }
@@ -39,7 +48,7 @@ class VideoGamesViewModel {
     
     func sortAndReload() {
         videoGames = VideoGame.sort(videoGames: videoGames)
-        // TODO: Reload data
+        delegate?.videoGamesUpdatedSuccessfully()
     }
     
     
