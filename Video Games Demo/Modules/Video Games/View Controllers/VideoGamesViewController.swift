@@ -59,6 +59,8 @@ extension VideoGamesViewController: VideoGamesViewModelDelegate {
     
     func failedLoadingVideoGames(errorMessage: String) {
         let alertController = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
 }
