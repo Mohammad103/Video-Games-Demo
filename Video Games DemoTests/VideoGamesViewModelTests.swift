@@ -35,11 +35,6 @@ class VideoGamesViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.coverURL(at: 0), "https://cdn.tutsplus.com/psd/uploads/legacy/psdtutsarticles/linkb_60vgamecovers/1.jpg")
     }
     
-    func testVideoGameRating() {
-        let viewModel = VideoGamesViewModel()
-        XCTAssertEqual(viewModel.rating(at: 0), 0.0)
-    }
-    
     func testSetVideoGameRating() {
         let viewModel = VideoGamesViewModel()
         viewModel.setRating(at: 0, rating: 5.0)
@@ -60,14 +55,6 @@ class VideoGamesViewModelTests: XCTestCase {
         XCTAssertTrue(VideoGame.VideoGameRatings.contains(viewModel.rating(at: 7)))
         XCTAssertTrue(VideoGame.VideoGameRatings.contains(viewModel.rating(at: 8)))
         XCTAssertTrue(VideoGame.VideoGameRatings.contains(viewModel.rating(at: 9)))
-    }
-    
-    func testSortVideoGames() {
-        let viewModel = VideoGamesViewModel()
-        viewModel.sortAndReload()
-        
-        XCTAssertEqual(viewModel.title(at: 0), "Crysis")
-        XCTAssertEqual(viewModel.title(at: 9), "Super Mario Bros.")
     }
     
     func testRandomSortVideoGames() {
