@@ -22,8 +22,8 @@ class VideoGamesViewControllerTests: XCTestCase {
         
         controller.loadViewIfNeeded()
         XCTAssertNotNil(controller.tableView)
-        XCTAssertNotNil(controller.tableView.delegate is VideoGamesViewController)
-        XCTAssertNotNil(controller.tableView.dataSource is VideoGamesViewController)
+        XCTAssertTrue(controller.tableView.delegate is VideoGamesViewController)
+        XCTAssertTrue(controller.tableView.dataSource is VideoGamesViewController)
     }
 
     override func tearDown() {
